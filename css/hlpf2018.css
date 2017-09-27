@@ -1,0 +1,161 @@
+*============================================================PRIMARY STRUCTURE============================================================*/ .container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+  SECTIONS
+============================================================ */
+
+section.module:last-child {
+    margin-bottom: 0;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-family: "Francois One", sans-serif;
+    font-size: 30px;
+}
+
+section.module p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+section.module p:last-child {
+    margin-bottom: 0;
+}
+
+section.module.content {
+    padding: 40px 0;
+}
+
+section.module.parallax {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+section.module.parallax h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Oswald", sans-serif;
+    font-size: 48px;
+    /*    line-height: 500px;*/
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /*    height: 100px;*/
+}
+
+section.module.parallax h2 {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Oswald", sans-serif;
+    font-size: 48px;
+    /*    line-height: 500px;*/
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1.thetitle {
+    padding-top: 1.3em;
+}
+
+section.module.parallax-1 {
+    background-image: url("../img/confroom2.jpg");
+    height: 600px;
+}
+
+section.module.parallax-2 {
+    background-image: url("../img/vnrs2.jpg");
+}
+
+section.module.parallax-3 {
+    background-image: url("../img/confroom.jpg");
+}
+
+.innerArea {
+    width: 100%;
+    margin-top: 111px;
+}
+
+.mainArea {
+    margin-top: 0;
+}
+
+.menu {
+    height: 28px !important;
+}
+
+#menu_container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.85;
+    background-color: rgb(41, 43, 44);
+    z-index: 999999;
+}
+
+#hlpf_menu {
+    width: 960px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.innerArea {
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+a.navbar-brand:hover {
+    font-size: 20px;
+}
+
+.affix {
+    position: fixed;
+    top: 0;
+}
+
+.affix-bottom {
+    position: absolute;
+}
+
+@media all and (min-width: 960px) {
+    section.module.parallax h1 {
+        font-size: 160px;
+    }
+    section.module.parallax h2 {
+        font-size: 48px;
+    }
+}
+
+@media all and (min-width: 544px) and (max-width: 960px) {
+    section.module h2 {
+        font-size: 42px;
+    }
+    section.module.parallax h1 {
+        font-size: 96px;
+    }
+    section.module.parallax h2 {
+        font-size: 30px;
+    }
+    section.module.parallax-1 {
+        height: 386px;
+    }
+}
+
+@media all and (max-width: 544px) {
+    section.module.parallax-1 {
+        height: 200px;
+    }
+    h1.thetitle {
+        padding-top: 1.7em;
+    }
+}
