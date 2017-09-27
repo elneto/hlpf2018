@@ -120,7 +120,7 @@ a.navbar-brand:hover {
 
 .affix {
     position: fixed;
-    top: 0;
+    top: 83px;
 }
 
 .affix-bottom {
