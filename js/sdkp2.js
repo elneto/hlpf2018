@@ -39,25 +39,11 @@ $(document).ready(function () {
 });
 $(document).scroll(function () {
     if ($(this).scrollTop() > 111) {
-        //        $("#unLogo").attr("class", "unLogo_small");
-        //        $("#logoText").attr("class", "logoText_small");
-        //        $("#topBarArea").attr("class", "topBarArea_small");
         $("#menuBarArea").attr("class", "menuBarArea_small");
-//        $("#icons").attr("class", "icons_small");
-//        $("#searchbox").attr("class", "searchbox_small");
-//        $("#accountbox").attr("class", "accountbox_small");
     }
 });
 $(document).scroll(function () {
     if ($(this).scrollTop() < 111) {
-        //        $("#unLogo").attr("class", "unLogo");
-        //        $("#logoText").attr("class", "logoText");
-        //        $("#topBarArea").attr("class", "topBarArea");
-//        $("#searchbox").attr("class", "searchbox");
-//        $("#accountbox").attr("class", "accountbox");
-//        $("#icons").attr("class", "icons");
-
-
         $("#menuBarArea").attr("class", "menuBarArea");
     }
 });
