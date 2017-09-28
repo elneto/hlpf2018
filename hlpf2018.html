@@ -221,10 +221,19 @@
 
 </html>
 <script>
-    $('[data-spy="affix"]').on('affixed.bs.affix', function() {
-        // from http://stackoverflow.com/questions/6551429/adjust-a-width-based-on-parent-w-jquery
-        $(".affix").css("width", $(".affix").parent().css("width").replace('px', '') - 30);
-    })
-    //    $(function() { // var $affixElement = $('[data-spy="affix"]'); // $("menuBarArea").width("$affixElement.parent().width()"); // });
+    // Bind to the resize event of the window object
+    $(window).on("resize", function() {
+        $('#menu_container').affix({
+            offset: {
+                top: $(".parallax-1").height() + 25
+            }
+        });
+        //console.log($(".parallax-1").height() + 25)
+        // Invoke the resize event immediately
+    }).resize();
+    //The last .resize() call will run this code upon load. as per
+    //https://stackoverflow.com/questions/1974788/combine-onload-and-onresize-jquery
+
+    //    $(window).on("scroll", function() { // console.log($(this).scrollTop()); // });
 
 </script>
