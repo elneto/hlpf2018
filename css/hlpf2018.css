@@ -95,7 +95,7 @@ section.module.parallax-3 {
 #menu_container {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100% !important;
     opacity: 0.85;
     background-color: rgb(41, 43, 44);
     z-index: 999999;
@@ -114,18 +114,42 @@ section.module.parallax-3 {
     font-weight: 300;
 }
 
+.top,
+.topBarArea,
+.topBarArea_small {
+    position: absolute;
+    z-index: 0;
+}
+
+.menuBarArea {
+    top: 111px;
+}
+
+.menuBarArea_small {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
 a.navbar-brand:hover {
     font-size: 20px;
 }
 
 .affix {
-    position: fixed;
-    top: 83px;
+    position: fixed !important;
+    top: 28px;
+    height: 56px;
+    width: 100% !important;
+    z-index: 10;
+    opacity: 0.95 !important;
 }
 
+
+/*
 .affix-bottom {
     position: absolute;
 }
+*/
 
 @media all and (min-width: 960px) {
     section.module.parallax h1 {

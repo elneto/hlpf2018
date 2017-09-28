@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/affix.js"></script>
     <script type="text/javascript" src="https://sustainabledevelopment.un.org/include/workspace.js"></script>
-    <script type="text/javascript" src="https://sustainabledevelopment.un.org/content/documents/sdkp.js"></script>
+    <script type="text/javascript" src="js/sdkp2.js"></script>
     <link rel="stylesheet" href="https://sustainabledevelopment.un.org/content/documents/sdkp.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="https://sustainabledevelopment.un.org/content/documents/sdkp_1060.css" />
     <link rel="stylesheet" type="text/css" href="https://sustainabledevelopment.un.org/content/documents/sdkp_920.css" />
@@ -19,8 +19,8 @@
 </head>
 
 <body>
-    <div class="top" align="center">
-        <div id="skiptocontent"><a href="#maincontent" tabindex="1">skip to main content</a></div>
+    <div id="skiptocontent"><a href="#maincontent" tabindex="1">skip to main content</a></div>
+    <div class="top" align="center" id="UNBarArea">
         <div align="middle">
             <div align="left" class="topMiddle">
                 <div style="padding-top:7px;float:left;"><img src="/content/images/house.png" class="house" alt="house icon"><a href="http://www.un.org/en/index.html" target="_blank" tabindex="2">Welcome to the United Nations</a></div>
@@ -67,47 +67,47 @@
                 </a>
             </div>
             <div style="clear:both;"></div>
-            <div id="menuBarArea" class="menuBarArea" align="middle">
-                <div class="menuArea">
-                    <a href="#" id="miniNavLink">
-                        <div class="menuOption"><img style="border:0px;" src="https://sustainabledevelopment.un.org/images/mininav.png" alt="mini navigation icon"></div>
-                    </a>
-                    <div id="theTopMenu">
-                        <a href="/">
-                            <div class="menu">Home</div>
-                        </a>
-                        <a href="/hlpf">
-                            <div class="menu">High-level Political Forum</div>
-                        </a>
-                        <a href="/memberstates">
-                            <div class="menu">States</div>
-                        </a>
-                        <a href="/topics/sids">
-                            <div class="menu">SIDS</div>
-                        </a>
-                        <a href="/sdgs">
-                            <div class="menu">SDGs</div>
-                        </a>
-                        <a href="/topics">
-                            <div class="menu">Topics</div>
-                        </a>
-                        <a href="/unsystem">
-                            <div class="menu">UN System</div>
-                        </a>
-                        <a href="/mgos">
-                            <div class="menu">Stakeholder Engagement</div>
-                        </a>
-                        <a href="/sdinaction">
-                            <div class="menu">Partnerships</div>
-                        </a>
-                        <a href="/resourcelibrary">
-                            <div class="menu">Resources</div>
-                        </a>
-                        <a href="/about">
-                            <div class="menu">About</div>
-                        </a>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div id="menuBarArea" class="menuBarArea" align="middle">
+        <div class="menuArea">
+            <a href="#" id="miniNavLink">
+                <div class="menuOption"><img style="border:0px;" src="https://sustainabledevelopment.un.org/images/mininav.png" alt="mini navigation icon"></div>
+            </a>
+            <div id="theTopMenu">
+                <a href="/">
+                    <div class="menu">Home</div>
+                </a>
+                <a href="/hlpf">
+                    <div class="menu">High-level Political Forum</div>
+                </a>
+                <a href="/memberstates">
+                    <div class="menu">States</div>
+                </a>
+                <a href="/topics/sids">
+                    <div class="menu">SIDS</div>
+                </a>
+                <a href="/sdgs">
+                    <div class="menu">SDGs</div>
+                </a>
+                <a href="/topics">
+                    <div class="menu">Topics</div>
+                </a>
+                <a href="/unsystem">
+                    <div class="menu">UN System</div>
+                </a>
+                <a href="/mgos">
+                    <div class="menu">Stakeholder Engagement</div>
+                </a>
+                <a href="/sdinaction">
+                    <div class="menu">Partnerships</div>
+                </a>
+                <a href="/resourcelibrary">
+                    <div class="menu">Resources</div>
+                </a>
+                <a href="/about">
+                    <div class="menu">About</div>
+                </a>
             </div>
         </div>
     </div>
@@ -123,9 +123,9 @@
                         <h1 class="thetitle">HLPF 2018</h1>
                         <h2 class="thesub hidden-xs-down">High-level Political Forum 2018</h2>
                     </div>
-                    <div id="menu_container">
+                    <div id="menu_container" data-spy="affix" data-offset-top="625">
                         <div id="hlpf_menu">
-                            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" data-spy="affix" data-offset-top="580">
+                            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
                                 <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
@@ -225,5 +225,9 @@
         // from http://stackoverflow.com/questions/6551429/adjust-a-width-based-on-parent-w-jquery
         $(".affix").css("width", $(".affix").parent().css("width").replace('px', '') - 30);
     })
+    $(function() {
+        var $affixElement = $('[data-spy="affix"]');
+        $("menuBarArea").width("$affixElement.parent().width()");
+    });
 
 </script>
