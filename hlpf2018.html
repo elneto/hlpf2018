@@ -225,9 +225,6 @@
         // from http://stackoverflow.com/questions/6551429/adjust-a-width-based-on-parent-w-jquery
         $(".affix").css("width", $(".affix").parent().css("width").replace('px', '') - 30);
     })
-    $(function() {
-        var $affixElement = $('[data-spy="affix"]');
-        $("menuBarArea").width("$affixElement.parent().width()");
-    });
+    //    $(function() { // var $affixElement = $('[data-spy="affix"]'); // $("menuBarArea").width("$affixElement.parent().width()"); // });
 
 </script>
